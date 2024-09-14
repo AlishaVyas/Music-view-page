@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function searchSpotify(event){
+            event.preventDefault();
+            const song = document.getElementById("ss").value;
+            if(song){
+                const searchUrl = `https://open.spotify.com/search/${encodeURIComponent(song)}`;
+                window.open(searchUrl,"-blank");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <div id="top">
+            <div id="overlay">
+                <label>
+                    <input type="checkbox">
+                    <div class="toggle">
+                        <span class="top_line common"></span>
+                        <span class="middle_line common"></span>
+                        <span class="bottom_line common"></span>
+
+                    </div>
+                    <div class="slide">
+                        <br><br>
+                        <ul>
+                            <li><a href="#"><i class="ri-home-line"></i> Home</a></li>
+                            <li><a href="#"><i class="ri-search-line"></i> Search</a></li>
+                            <li><a href="#"><i class="ri-heart-line"></i> Liked</a></li>
+                            <li><a href="#"><i class="ri-share-forward-line"></i> Share</a></li>
+
+
+                        </ul>
+                    </div>
+                </label>
+                <div id="searchbar">
+                    <form onsubmit="searchSpotify(event)" class="search">
+                        <input type="text" id="ss" placeholder="What do you want to listen to?" name="q">
+                        <button type="submit"><i class="ri-search-line"></i></button>
+                    </form>
+                </div>
+                <div id="text">
+                    <h1>Music.</h1>
+                    <div id="textright">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic qui ea doloribus laudantium?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nesciunt neque modi quos reprehenderit?</p>
+                        <div id="icon">
+                            <i class="ri-instagram-line"></i>
+                            <i class="ri-twitter-line"></i>
+                            <i class="ri-pinterest-line"></i>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="bone">
+                <h2>Updates</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, molestias eos? Modi ab corrupti sit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, molestias.</p>
+            </div>
+            <div id="btwo">
+                <i class="ri-play-fill"></i>
+            </div>
+            <div id="bthree">
+                <div id="b3top">
+                    <h4 style="font-weight:bolder; font-size: 17px;">Lyrics preview</h4>
+                    <p>I saw mercy</p>
+                    <p> Mercy seated where the judge should be</p>
+                    <p>Was guilty</p>
+                    <p>Guilty in getting out of jail free</p>
+                </div>
+                <div id="b3bottom"></div>
+            </div>
+            <div id="bfour">
+                <h2>Latest</h2>
+                <div id="scroll">
+
+                    
+                    <div class="suggestions">
+                        <div id="photo"></div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, minus.</p>
+                        <i class="ri-heart-line"></i>
+
+                    </div>
+                    <div class="suggestions">
+                        <div id="photo1"></div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, minus.</p>
+                        <i class="ri-heart-line"></i>
+
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

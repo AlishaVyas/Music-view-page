@@ -1,0 +1,354 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Gilroy";
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+#main{
+    width:100%;
+    height:100%;
+}
+
+#top{
+    width:100%;
+    height:60%;
+    background-image:url(https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size:cover;
+    background-position:bottom;
+}
+
+#overlay{
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.475);
+    position: relative;
+    display: flex;
+}
+
+label input{
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
+
+
+}
+.slide{
+    border-radius:30px ;
+    height:280px;
+    position:absolute;
+    background-color: rgb(88, 61, 138, 0.2);
+    backdrop-filter: blur(5px),saturate(180%);
+    width: 120px;
+    transition: 0.5s ease;
+    transform: translateX(-120px);
+
+}
+
+.slide input{
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
+
+}
+.toggle{
+    position: absolute;
+    height:30px;
+    width:30px;
+    /* background-color: red; */
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 7px;
+    top:15px;
+    left:15px;
+    /* background-color: #fff; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 9); */
+}
+
+.toggle .common{
+    position:absolute;
+    height: 2px;
+    width:20px;
+    background-color: #fff;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .top_line{
+    top:30%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.toggle .bottom_line{
+    top:70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.toggle .middle_line{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+input:checked ~ .toggle .top_line{
+    left: 70px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+    
+}
+
+input:checked ~ .toggle .bottom_line{
+    left: 70px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+    
+}
+
+input:checked ~ .toggle .middle_line{
+    opacity:0;
+    transform:translateX(65px);
+}
+
+input:checked ~.slide{
+    transform: translatex(0);
+    box-shadow: 0  0 15px rgba(0,0,0,0.5);
+}
+.slide ul li{
+    list-style:none;
+}
+
+.slide ul li a{
+    color:#efdbc4;
+    font-weight: 500;
+    padding: 5px 25px;
+    display:block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    margin-top: 15px;
+}
+
+.slide ul li:hover a{
+    color: #efdbc4;
+    background-color: #352f5e;
+}
+.slide ul li a i{
+    width: 70px;
+    text-align: center;
+}
+#searchbar{
+   position:absolute;
+   margin-left: 520px;
+   margin-top: 200px;
+}
+
+.search{
+    width:400px;
+    max-width: 700px;
+    background :rgb(88, 61, 138, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    padding: 10px 20px;
+    backdrop-filter: blur(5px),saturate(180%);
+}
+
+.search input{
+    background: transparent;
+    flex: 1;
+    border:0;
+    outline: none;
+    /* padding: 20px 20px; */
+    font-size: 20px;
+    color:#efdbc4 ;
+}
+
+::placeholder{
+    color: #efdbc4;
+}
+
+.search button{
+    background: transparent;
+    border: 0;
+    outline: none;
+
+}
+
+.search button i {
+    color:#efdbc4 ;
+   
+}
+
+
+#text{
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+    /* height:120px; */
+    bottom: 10%;
+    /* padding: 0 10vw; */
+    /* background-color: red; */
+    color:#efdbc4;
+    position:absolute;
+
+    
+}
+
+#text h1{
+    font-size:6vw;
+    font-weight: 500;
+    
+}
+
+#textright{
+    width:30%;
+    /* height:100%; */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 500px;
+    
+}
+
+#textright p{
+    font-size: 12px;
+    width:40%;
+}
+
+#textright i{
+    color: #fff;
+}
+#bottom{
+    width:100%;
+    height:40%;
+    background-color:blue ;
+    display: flex;
+}
+
+#bone{
+    width:25%;
+    background-color:#583d8a;
+    padding: 30px;
+}
+
+#bone h2{
+    margin-bottom: 20px;
+}
+#bone p {
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+#btwo{
+    width:25%;
+    height:100%;
+    background-color:#13ec0f;
+    background-image: url(https://i.pinimg.com/originals/e3/91/b1/e391b16b186173b8cbdc61b565cb460d.jpg);
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+#btwo i{
+    /* position:absolute; */
+    font-size: 60px;
+    color: #efdbc4;
+    /* margin-left: 150px;
+    margin-top: 120px; */
+}
+
+
+#bthree{
+    width:17%;
+    height:100%;
+    background-color:#ec0faa;
+}
+
+
+#b3top{
+    width:100%;
+    height:42.5%;
+    background-color:#7e45be;
+    padding: 10px;
+}
+
+#b3top p{
+    width: 90%;
+    margin-left: 11px;
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+#b3bottom{
+    width:100%;
+    height:50%;
+    background-color:#0f7aec;
+    background-image: url(https://i.pinimg.com/originals/9f/3e/f2/9f3ef2cf83dbf57c6d4ad62e83c1a7cf.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#bfour
+{
+    width:33%;
+    height:78%;
+    background-color:#352f5e;
+    color:#efdbc4 ;
+    padding: 30px;
+}
+
+
+#bfour h2{
+    margin-bottom: 20px;
+}
+.suggestions{
+    display: flex;
+    justify-content:space-between;
+    border-style: outset;
+    border-width: thin;
+    border-color: #0a0913;
+    margin: 10px;
+}
+.suggestions #photo{
+    width:60px;
+    height:60px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-image: url(https://i.pinimg.com/originals/e7/15/06/e7150693dcc4a61e014a6dd9d995df13.jpg);
+    background-position: center;
+    background-size: contain;
+}
+
+.suggestions #photo1{
+    width:60px;
+    height:60px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-image: url(https://i.pinimg.com/originals/72/bd/b0/72bdb0cc0637b78dc4288a75b069138e.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.suggestions p{
+    width: 70%;
+    margin-top: 5px;
+}
+
+.suggestions i{
+    margin-top:10px ;
+    margin-right: 10px;
+}
