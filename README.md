@@ -25,8 +25,8 @@ This project is a sleek and responsive music-themed web application where users 
 ## Screenshots 📸
 
 ### Desktop View
-![Desktop View](![Screenshot 2024-12-09 234045](https://github.com/user-attachments/assets/46b044e0-69d4-4986-8843-342832852211)
-)
+![Screenshot 2024-12-09 234045](https://github.com/user-attachments/assets/46b044e0-69d4-4986-8843-342832852211)
+
 
 ## Installation 🔧
 
